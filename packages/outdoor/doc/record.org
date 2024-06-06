@@ -1,0 +1,211 @@
+* TODO 户外地图生成
+
+
+# grass + slope + path
+
+low quality:
+	color map + height map + base map?
+
+no layer
+
+no bumpmap:
+	TODO remove normalMap?
+
+# no lighting
+
+no cull
+
+no lod
+
+
+# ** TODO perf: tri planar texture
+
+# ** TODO slope
+
+# ** TODO path
+
+
+
+
+
+# ** TODO Terrain LOD
+
+# no need? keep Terrain <= 1k * 1k(triangle count <= 5W)?
+
+** DONE color map
+
+The bitmap image is usually the same size as the height map to ensure one to one translation of bitmap pixel colors to height map vertices.
+
+generate veretex color by read color map
+
+
+
+used as:
+add path
+add slope
+
+
+
+TODO generate veretex color by read color map
+
+TODO remove base_texture, normal_texture
+
+TODO run test:
+render terrain
+
+
+
+# TODO remove uv
+
+
+** DONE base map
+
+
+
+
+** DONE clear
+
+# TODO remove base_texture, normal_texture
+TODO remove normal_texture
+
+
+
+# ** TODO lighting
+
+
+
+** DONE 相机限制：不陷入地形中
+
+getCameraVelocity
+
+
+** DONE 碰撞检测：
+TODO add third person camera(add girl)
+
+TODO update camera collision
+
+# TODO add Collision
+
+TODO move on terrain
+
+
+getPlayerVelocity
+
+
+# ** TODO perf: quad tree for cull and collision check?
+
+
+** DONE add 植物:tree, //grass map
+
+
+** DONE support pick lod2
+
+
+
+
+# TODO use Octree (remove triangles) + InstancedLOD2
+
+
+TODO use Octree (remove triangles, only boxes and names(unique)) + InstancedLOD2
+
+Octree:
+add details
+return indices
+get xxx
+
+
+one Octree for one category mesh
+
+Octree is only used for static ones
+
+
+
+# TODO benchmark compare
+
+TODO pass run test
+	TODO not expand frustum
+
+TODO can pick tree
+
+
+
+TODO show pickable box when debug
+
+TODO fix pick
+	TODO why some can't pick?
+	remain two kinds trees?
+
+
+** TODO support collision lod2
+
+
+# TODO 直接根据高度来限制 不可进入（如悬崖不可进入）？
+# 	过高或者过低 都不可进入
+
+
+TODO girl collision with tree
+
+TODO add collision wall in map
+	only add to octree, not add to scene
+
+TODO girl collision with wall
+
+
+
+
+** TODO fix camera collision
+
+TODO check intersects with wall and trees
+
+
+TODO move to direction when collision
+
+TODO keep same distance
+
+
+
+
+# ** TODO Terrain Frustum Cull
+
+
+# * TODO dynamic day light
+
+# update shadow
+
+
+
+* TODO 核心Demo：主角移动
+处理碰撞
+
+TODO add tree
+
+TODO add grass map
+
+TODO fix collision:
+some not check
+
+TODO update collision corresponding
+	TODO fix dither
+	TODO consider speed
+
+TODO update wall
+
+TODO log loop time:
+should <= 4 ms in mobile?
+
+
+TODO tree should be low polygon
+
+** TODO test in PC(mac, win10)
+
+** TODO test in mobile(android, ios)
+
+
+* TODO write article and open source
+
+
+# * TODO billboard support pack texture: billboard add instanced attribute: uv offset
+
+# color add map data
+
+
